@@ -1,0 +1,198 @@
+<svg viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Define styles -->
+  <defs>
+    <style>
+      .container-box { fill: #f5f5f5; stroke: #333; stroke-width: 2; }
+      .docker-box { fill: #e3f2fd; stroke: #0db7ed; stroke-width: 3; }
+      .service-box { fill: #fff; stroke: #1976d2; stroke-width: 2; }
+      .storage-box { fill: #f3e5f5; stroke: #7b1fa2; stroke-width: 2; }
+      .gateway-box { fill: #e8f5e9; stroke: #388e3c; stroke-width: 2; }
+      .frontend-box { fill: #fff3e0; stroke: #f57c00; stroke-width: 2; }
+      .title-text { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; }
+      .detail-text { font-family: Arial, sans-serif; font-size: 11px; }
+      .small-text { font-family: Arial, sans-serif; font-size: 10px; fill: #666; }
+      .docker-text { font-family: Arial, sans-serif; font-size: 12px; fill: #0db7ed; font-weight: bold; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333" />
+    </marker>
+  </defs>
+  
+  <!-- Main Container - Ubuntu 24.0.4 VM -->
+  <rect x="50" y="50" width="1300" height="800" class="container-box" rx="10"/>
+  <text x="60" y="75" class="title-text">Ubuntu 24.0.4 Virtual Machine - Google Cloud Platform (GCP)</text>
+  <text x="60" y="95" class="small-text">• Enterprise-grade Ubuntu LTS with security hardening • Container-optimized OS • Auto-scaling enabled</text>
+  <text x="60" y="110" class="small-text">• GCP global network • 99.95% SLA guarantee • Elastic computing resources</text>
+  
+  <!-- Docker Benefits Box -->
+  <rect x="70" y="130" width="300" height="150" class="docker-box" rx="5"/>
+  <text x="80" y="150" class="docker-text">🐳 Docker Containerization Benefits</text>
+  <text x="80" y="170" class="detail-text">✓ Environment Consistency</text>
+  <text x="80" y="185" class="detail-text">✓ Rapid Deployment (seconds vs minutes)</text>
+  <text x="80" y="200" class="detail-text">✓ Resource Efficiency (30-50% savings)</text>
+  <text x="80" y="215" class="detail-text">✓ Version Control & Easy Rollback</text>
+  <text x="80" y="230" class="detail-text">✓ Microservices Ready Architecture</text>
+  <text x="80" y="245" class="detail-text">✓ Security Isolation</text>
+  <text x="80" y="260" class="detail-text">✓ "Build once, run anywhere"</text>
+  
+  <!-- Docker Compose Orchestration -->
+  <rect x="400" y="130" width="900" height="600" class="docker-box" rx="10"/>
+  <text x="750" y="155" class="docker-text">Docker Compose Orchestration</text>
+  <text x="620" y="175" class="detail-text">Single docker-compose.yml defines entire application stack • Environment variables for configuration</text>
+  
+  <!-- Test Environment -->
+  <g transform="translate(420, 200)">
+    <rect width="400" height="180" class="service-box" rx="5" stroke-dasharray="5,5"/>
+    <text x="10" y="25" class="title-text">TEST Environment (test.infomate.co.nz)</text>
+    <text x="10" y="45" class="small-text">• Feature testing • Integration testing • UAT</text>
+    <text x="10" y="60" class="small-text">• Same Docker images as production</text>
+    
+    <!-- Environment Variables -->
+    <rect x="20" y="80" width="360" height="80" fill="#f0f0f0" stroke="#999" rx="3"/>
+    <text x="30" y="100" class="small-text" font-family="monospace">Environment Variables:</text>
+    <text x="30" y="115" class="small-text" font-family="monospace">ENVIRONMENT=test</text>
+    <text x="30" y="130" class="small-text" font-family="monospace">DOMAIN=test.infomate.co.nz</text>
+    <text x="30" y="145" class="small-text" font-family="monospace">DEBUG=true</text>
+  </g>
+  
+  <!-- Production Environment -->
+  <g transform="translate(850, 200)">
+    <rect width="400" height="180" class="service-box" rx="5"/>
+    <text x="10" y="25" class="title-text">PRODUCTION Environment (www.infomate.co.nz)</text>
+    <text x="10" y="45" class="small-text">• Live traffic • High availability • Monitoring enabled</text>
+    <text x="10" y="60" class="small-text">• Identical Docker images and configurations</text>
+    
+    <!-- Environment Variables -->
+    <rect x="20" y="80" width="360" height="80" fill="#f0f0f0" stroke="#999" rx="3"/>
+    <text x="30" y="100" class="small-text" font-family="monospace">Environment Variables:</text>
+    <text x="30" y="115" class="small-text" font-family="monospace">ENVIRONMENT=production</text>
+    <text x="30" y="130" class="small-text" font-family="monospace">DOMAIN=www.infomate.co.nz</text>
+    <text x="30" y="145" class="small-text" font-family="monospace">DEBUG=false</text>
+  </g>
+  
+  <!-- Shared Docker Services -->
+  <g transform="translate(420, 400)">
+    <text x="370" y="-10" class="docker-text">Shared Docker Services (Identical in Test & Production)</text>
+    
+    <!-- Traefik Container -->
+    <rect x="0" y="20" width="200" height="100" class="gateway-box" rx="5"/>
+    <text x="10" y="40" class="title-text">Traefik (Docker Container)</text>
+    <text x="10" y="55" class="detail-text">• Reverse proxy & Load balancer</text>
+    <text x="10" y="68" class="detail-text">• Automatic SSL/TLS (Let's Encrypt)</text>
+    <text x="10" y="81" class="detail-text">• Docker service discovery</text>
+    <text x="10" y="94" class="detail-text">• Dynamic routing configuration</text>
+    <text x="10" y="107" class="detail-text">• Health checks & monitoring</text>
+    
+    <!-- Frontend Container -->
+    <rect x="220" y="20" width="200" height="100" class="frontend-box" rx="5"/>
+    <text x="230" y="40" class="title-text">Frontend (Docker Container)</text>
+    <text x="230" y="55" class="detail-text">• Vue 3 + Nuxt 3 SSR</text>
+    <text x="230" y="68" class="detail-text">• Node.js runtime</text>
+    <text x="230" y="81" class="detail-text">• 80+ reusable components</text>
+    <text x="230" y="94" class="detail-text">• PWA capabilities</text>
+    <text x="230" y="107" class="detail-text">• Multi-stage Docker build</text>
+    
+    <!-- Backend Container -->
+    <rect x="440" y="20" width="200" height="100" class="service-box" rx="5"/>
+    <text x="450" y="40" class="title-text">Backend (Docker Container)</text>
+    <text x="450" y="55" class="detail-text">• Django + Django REST Framework</text>
+    <text x="450" y="68" class="detail-text">• Python 3.11+ runtime</text>
+    <text x="450" y="81" class="detail-text">• Gunicorn WSGI server</text>
+    <text x="450" y="94" class="detail-text">• Celery async tasks</text>
+    <text x="450" y="107" class="detail-text">• Health check endpoints</text>
+    
+    <!-- IM Maker Container -->
+    <rect x="660" y="20" width="180" height="100" class="service-box" rx="5"/>
+    <text x="670" y="40" class="title-text">IM Maker (Docker Container)</text>
+    <text x="670" y="55" class="detail-text">• Image processing service</text>
+    <text x="670" y="68" class="detail-text">• WebP optimization</text>
+    <text x="670" y="81" class="detail-text">• Thumbnail generation</text>
+    <text x="670" y="94" class="detail-text">• CDN integration</text>
+    <text x="670" y="107" class="detail-text">• Cache headers</text>
+    
+    <!-- Data Layer Containers -->
+    <rect x="0" y="150" width="200" height="100" class="storage-box" rx="5"/>
+    <text x="10" y="170" class="title-text">PostgreSQL (Docker Container)</text>
+    <text x="10" y="185" class="detail-text">• PostgreSQL 15+</text>
+    <text x="10" y="198" class="detail-text">• Persistent volume mount</text>
+    <text x="10" y="211" class="detail-text">• Automated backups</text>
+    <text x="10" y="224" class="detail-text">• Connection pooling</text>
+    <text x="10" y="237" class="detail-text">• Read replicas support</text>
+    
+    <rect x="220" y="150" width="200" height="100" class="storage-box" rx="5"/>
+    <text x="230" y="170" class="title-text">Redis (Docker Container)</text>
+    <text x="230" y="185" class="detail-text">• Redis 7+</text>
+    <text x="230" y="198" class="detail-text">• Persistence enabled</text>
+    <text x="230" y="211" class="detail-text">• Session storage</text>
+    <text x="230" y="224" class="detail-text">• Cache layer</text>
+    <text x="230" y="237" class="detail-text">• Pub/Sub messaging</text>
+    
+    <rect x="440" y="150" width="200" height="100" class="storage-box" rx="5"/>
+    <text x="450" y="170" class="title-text">MinIO (Docker Container)</text>
+    <text x="450" y="185" class="detail-text">• S3-compatible storage</text>
+    <text x="450" y="198" class="detail-text">• Multi-tenant support</text>
+    <text x="450" y="211" class="detail-text">• Versioning enabled</text>
+    <text x="450" y="224" class="detail-text">• Encryption at rest</text>
+    <text x="450" y="237" class="detail-text">• CDN integration</text>
+  </g>
+  
+  <!-- Watchtower -->
+  <rect x="420" y="680" width="830" height="40" class="docker-box" rx="5"/>
+  <text x="430" y="700" class="docker-text">Watchtower (Docker Container) - Automated Container Updates</text>
+  <text x="430" y="715" class="small-text">• Monitors Docker Hub for new images • Automatic rolling updates • Zero-downtime deployment • Notification on updates</text>
+  
+  <!-- Docker Compose Benefits -->
+  <rect x="70" y="300" width="300" height="200" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
+  <text x="80" y="320" class="title-text" fill="#2e7d32">Docker Compose Advantages</text>
+  <text x="80" y="340" class="detail-text">📋 Single Configuration File</text>
+  <text x="90" y="355" class="small-text">• All services defined in one place</text>
+  <text x="80" y="375" class="detail-text">🔄 One Command Deployment</text>
+  <text x="90" y="390" class="small-text">• docker-compose up -d</text>
+  <text x="80" y="410" class="detail-text">🌐 Service Networking</text>
+  <text x="90" y="425" class="small-text">• Automatic DNS between containers</text>
+  <text x="80" y="445" class="detail-text">📊 Resource Management</text>
+  <text x="90" y="460" class="small-text">• CPU/Memory limits per service</text>
+  <text x="80" y="480" class="detail-text">🔧 Environment Flexibility</text>
+  <text x="90" y="495" class="small-text">• .env files for configuration</text>
+  
+  <!-- External Services -->
+  <rect x="70" y="520" width="300" height="180" class="service-box" rx="5"/>
+  <text x="80" y="540" class="title-text">CI/CD Pipeline (GitHub Actions)</text>
+  <text x="80" y="560" class="detail-text">1. Code push to GitHub</text>
+  <text x="80" y="575" class="detail-text">2. Automated tests run</text>
+  <text x="80" y="590" class="detail-text">3. Docker images built</text>
+  <text x="80" y="605" class="detail-text">4. Push to Docker Hub/GCP Registry</text>
+  <text x="80" y="620" class="detail-text">5. Watchtower detects new images</text>
+  <text x="80" y="635" class="detail-text">6. Automatic container update</text>
+  <text x="80" y="650" class="detail-text">7. Health checks verify deployment</text>
+  <text x="80" y="665" class="detail-text">8. Notification sent to team</text>
+  <text x="80" y="685" class="small-text">• Rollback available if issues detected</text>
+  
+  <!-- User Access -->
+  <rect x="70" y="720" width="300" height="100" class="frontend-box" rx="5"/>
+  <text x="80" y="740" class="title-text">User Access Points</text>
+  <text x="80" y="760" class="detail-text">🌐 Web Browser: PWA, all modern browsers</text>
+  <text x="80" y="775" class="detail-text">📱 Mobile: iOS/Android (coming soon)</text>
+  <text x="80" y="790" class="detail-text">🔌 API: RESTful API for integrations</text>
+  <text x="80" y="805" class="detail-text">👨‍💼 Admin: Django admin interface</text>
+  
+  <!-- Future E-commerce -->
+  <rect x="420" y="750" width="400" height="80" fill="#fff3e0" stroke="#ff9800" stroke-width="2" stroke-dasharray="5,5" rx="5"/>
+  <text x="430" y="770" class="title-text" fill="#ff9800">E-commerce Integration (Coming in 2 months)</text>
+  <text x="430" y="790" class="detail-text">• WordPress + WooCommerce (Separate Docker Stack)</text>
+  <text x="430" y="805" class="detail-text">• myCred Points System • Dokan Multi-vendor</text>
+  <text x="430" y="820" class="detail-text">• API integration with main platform</text>
+  
+  <!-- Docker Network -->
+  <rect x="850" y="750" width="400" height="80" fill="#e3f2fd" stroke="#0db7ed" stroke-width="2" rx="5"/>
+  <text x="860" y="770" class="docker-text">Docker Networks</text>
+  <text x="860" y="790" class="detail-text">• Internal network for service communication</text>
+  <text x="860" y="805" class="detail-text">• External network for Traefik routing</text>
+  <text x="860" y="820" class="detail-text">• Isolated networks for security</text>
+  
+  <!-- Arrows showing data flow -->
+  <path d="M 370 240 L 420 240" stroke="#0db7ed" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 370 360 L 420 360" stroke="#0db7ed" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <text x="380" y="235" class="small-text">Users</text>
+  <text x="380" y="355" class="small-text">Deploy</text>
+</svg>
